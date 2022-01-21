@@ -1,20 +1,15 @@
 <template>
-  <Form v-slot="{ errors }" :validation-schema="schema" @submit="onSubmit">
-    <div
-      class="w-[720px] translate-y-32 md:translate-y-0 bg-white md:grid grid-cols-2 rounded-md shadow-md overflow-hidden"
-    >
-      <div class="p-6 flex-col justify-between">
+  <Form
+    v-slot="{ errors }"
+    class="login-form"
+    :validation-schema="schema"
+    @submit="onSubmit"
+  >
+    <div class="login-content">
+      <div class="login-info">
         <div>
-          <h2 class="text-center text-gray-700 text-lg mt-3">会员登录</h2>
-          <div class="mt-8">
-            <!-- <Field
-            v-slot="{ field }"
-            name="account"
-            :rules="{ required: true, email: true }"
-            class="jc-input"
-          >
-            <input v-bind="field" class="jc-input" />
-          </Field> -->
+          <h2 class="login-info">登陆页</h2>
+          <div class="login-detail">
             <Field
               name="account"
               class="jc-input"
@@ -23,7 +18,6 @@
               placeholder="请输入邮箱或者手机号"
             />
             <p v-if="errors.account" class="jc-error">请输入邮箱或者手机号</p>
-            <!-- <ErrorMessage name="account" as="p" class="jc-error" /> -->
             <Field
               name="password"
               class="jc-input mt-3"
@@ -32,15 +26,9 @@
               type="password"
             />
             <ErrorMessage name="password" as="p" class="jc-error" />
-            <!-- <jc-input v-model="form.account" placeholder="请输入手机号或邮箱" />
-          <jc-input class="mt-4" placeholder="请输入登录密码" /> -->
           </div>
           <jc-button class="mt-5 w-full" />
-          <div class="flex justify-center mt-3">
-            <i
-              class="fab fa-weixin bg-green-600 text-white rounded-full p-1 cursor-pointer"
-            ></i>
-          </div>
+          <div class="wechat-login"><i class="fab fa-weixin"></i></div>
         </div>
         <div class="flex gap-2 justify-center mt-5">
           <jc-link />
@@ -48,11 +36,8 @@
           <jc-link />
         </div>
       </div>
-      <div class="hidden md:block relative">
-        <img
-          src="/images/login.jpg"
-          class="w-full h-full object-cover absolute"
-        />
+      <div class="login-log">
+        <img src="/images/login.jpg" alt="" />
       </div>
     </div>
   </Form>

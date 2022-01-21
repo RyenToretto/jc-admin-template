@@ -1,3 +1,4 @@
+// 官方文档 https://vee-validate.logaretm.com/v4/
 import * as veeValidate from 'vee-validate';
 import rules from '@vee-validate/rules';
 import { loadLocaleFromURL, localize } from '@vee-validate/i18n';

@@ -1,27 +1,13 @@
 <template>
-  <div
-    class="h-screen w-screen bg-gray-700 flex flex-col justify-center items-center"
-  >
-    <img
-      src="/images/home.jpg"
-      class="w-52 h-52 object-cover rounded-full border-8 border-white mb-4"
-    />
-    <div>
-      <router-link :to="{ name: 'admin.home' }" class="jc-button"
+  <div class="home-page">
+    <img class="home-page-photo" src="/images/home.jpg" alt="" />
+    <div class="home-btn-box">
+      <router-link class="home-btn home-to-admin" :to="{ name: 'admin.home' }"
         >后台管理</router-link
       >
-      <router-link :to="{ name: 'login' }" class="jc-button jc-danger ml-3"
+      <router-link class="home-btn home-to-login" :to="{ name: 'login' }"
         >用户登录</router-link
       >
-    </div>
-    <div class="text-gray-200 text-sm font-mono drop-shadow-md mt-3 px-10">
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum."
     </div>
   </div>
 </template>
@@ -34,4 +20,21 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.home-page {
+  box-sizing: border-box;
+  .home-page-photo {
+    display: block;
+    margin: 0 auto;
+  }
+  .home-btn-box {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-btn {
+      padding: 6px 12px;
+    }
+  }
+}
+</style>

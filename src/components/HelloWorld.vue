@@ -10,25 +10,25 @@ const count = ref(0);
   <h1>{{ msg }}</h1>
 
   <p>
-    Recommended IDE setup:
+    退款的编辑器设置:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
   </p>
 
-  <p>See <code>README.md</code> for more information.</p>
+  <p>查看 <code>README.md</code> 获取更多信息.</p>
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
+      Vite 文档
     </a>
     |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
+    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 文档</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <button type="button" @click="count++">count = {{ count }}</button>
   <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
+    编辑
+    <code>components/HelloWorld.vue</code> 去测试热模块更新.
   </p>
 </template>

@@ -60,7 +60,7 @@
 
 <script setup lang="ts">
 import v from '@/plugins/validate';
-import userAPI from '@/api/userApi';
+import { requestLogin } from '@/api';
 import { store } from '@/utils';
 import { useRouter } from 'vue-router';
 
@@ -81,12 +81,12 @@ const schema = {
 const onSubmit = async (value: any) => {
   const {
     data: { token },
-  } = await userAPI.login();
+  } = await requestLogin();
   store.set('token', {
     token,
     expire: 10000,
   });
-  router.push({ name: 'home' });
+  await router.push({ name: 'home' });
 };
 </script>
 

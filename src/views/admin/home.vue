@@ -39,20 +39,11 @@ import { nextTick, ref } from 'vue';
 import echarts, { echart1, echart2 } from './echart';
 
 nextTick(() => {
-  const chart1 = echarts.init(document.getElementById('chart1'));
-  const chart2 = echarts.init(document.getElementById('chart2'));
+  const chart1 = echarts.init(document.getElementById('chart1') as HTMLElement);
+  const chart2 = echarts.init(document.getElementById('chart2') as HTMLElement);
   chart1.setOption(echart1);
   chart2.setOption(echart2);
 });
-
-interface ICard {
-  title: string;
-  price: number;
-  icon: string;
-  iconColor: string;
-  total: number;
-  totalTitle: string;
-}
 
 const cards = ref<ICard[]>([
   {

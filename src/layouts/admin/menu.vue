@@ -34,14 +34,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-interface IMenuItem {
-  title: string;
-  icon?: string;
-  active?: boolean;
-}
-interface IMenu extends IMenuItem {
-  children?: IMenuItem[];
-}
 
 const menus = ref<IMenu[]>([
   {

@@ -1,8 +1,3 @@
-export interface IData {
-  expire?: number;
-  [key: string]: any;
-}
-
 export default {
   set(key: string, data: IData) {
     if (data.expire) {

@@ -8,17 +8,21 @@ class Guard {
     // handling login and verification
     this.router.beforeEach((to, from) => {
       const token = store.get('token')?.token;
-      if (this.isLogin(to, token) === false) return { name: 'login' };
+      if (!Guard.isLogin(to, token)) {
+        return { name: 'login' };
+      }
 
-      if (this.isGuest(to, token) === false) return from;
+      if (!Guard.isGuest(to, token)) {
+        return from;
+      }
     });
   }
 
-  private isGuest(route: RouteLocationNormalized, token: any) {
+  private static isGuest(route: RouteLocationNormalized, token: any) {
     return Boolean(!route.meta.guest || (route.meta.guest && !token));
   }
 
-  private isLogin(route: RouteLocationNormalized, token: any) {
+  private static isLogin(route: RouteLocationNormalized, token: any) {
     return Boolean(!route.meta.auth || (route.meta.auth && token));
   }
 }

@@ -1,4 +1,4 @@
 interface IData {
-  expire?: number;
-  [key: string]: any;
+  expire?: number
+  [key: string]: any
 }

@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const menus = ref<IMenu[]>([
   {
@@ -43,26 +43,26 @@ const menus = ref<IMenu[]>([
     children: [
       { title: '404页面', active: true },
       { title: '403页面' },
-      { title: '500页面' },
-    ],
+      { title: '500页面' }
+    ]
   },
   {
     title: '编辑器',
     icon: 'fab fa-app-store-ios',
-    children: [{ title: 'Markdown编辑器' }, { title: '富文本编辑器' }],
-  },
-]);
+    children: [{ title: 'Markdown编辑器' }, { title: '富文本编辑器' }]
+  }
+])
 
 const resetMenus = () => {
   menus.value.forEach((pmenu) => {
-    pmenu.active = false;
-    pmenu.children?.forEach((m) => (m.active = false));
-  });
-};
+    pmenu.active = false
+    pmenu.children?.forEach((m) => (m.active = false))
+  })
+}
 const handle = (pmenu: IMenuItem, cmenu?: IMenuItem) => {
-  resetMenus();
-  pmenu.active = true;
-};
+  resetMenus()
+  pmenu.active = true
+}
 </script>
 
 <style scoped lang="scss">

@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router'
 
 export default {
   name: 'auth',
@@ -9,7 +9,7 @@ export default {
     {
       name: 'login',
       path: '/login',
-      component: () => import('@/views/auth/login.vue'),
-    },
-  ],
-} as RouteRecordRaw;
+      component: () => import('@/views/auth/login.vue')
+    }
+  ]
+} as RouteRecordRaw

@@ -35,15 +35,15 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref } from 'vue';
-import echarts, { echart1, echart2 } from './echart';
+import { nextTick, ref } from 'vue'
+import echarts, { echart1, echart2 } from './echart'
 
 nextTick(() => {
-  const chart1 = echarts.init(document.getElementById('chart1') as HTMLElement);
-  const chart2 = echarts.init(document.getElementById('chart2') as HTMLElement);
-  chart1.setOption(echart1);
-  chart2.setOption(echart2);
-});
+  const chart1 = echarts.init(document.getElementById('chart1') as HTMLElement)
+  const chart2 = echarts.init(document.getElementById('chart2') as HTMLElement)
+  chart1.setOption(echart1)
+  chart2.setOption(echart2)
+})
 
 const cards = ref<ICard[]>([
   {
@@ -52,7 +52,7 @@ const cards = ref<ICard[]>([
     icon: 'fas fa-apple-alt',
     iconColor: 'text-violet-500',
     total: 745323,
-    totalTitle: '总人数',
+    totalTitle: '总人数'
   },
   {
     title: '销售额',
@@ -60,7 +60,7 @@ const cards = ref<ICard[]>([
     icon: 'fab fa-angellist',
     iconColor: 'text-green-600',
     total: 31223,
-    totalTitle: '总销售额',
+    totalTitle: '总销售额'
   },
   {
     title: '订单数',
@@ -68,7 +68,7 @@ const cards = ref<ICard[]>([
     icon: 'fab fa-angrycreative',
     iconColor: 'text-red-500',
     total: 765323,
-    totalTitle: '总订单数',
+    totalTitle: '总订单数'
   },
   {
     title: '评论数',
@@ -76,9 +76,9 @@ const cards = ref<ICard[]>([
     icon: 'fab fa-app-store',
     iconColor: 'text-gray-500',
     total: 93523,
-    totalTitle: '总评论数',
-  },
-]);
+    totalTitle: '总评论数'
+  }
+])
 </script>
 
 <style scoped></style>

@@ -1,4 +1,4 @@
-import * as echarts from 'echarts/core';
+import * as echarts from 'echarts/core'
 import {
   TitleComponent,
   TitleComponentOption,
@@ -7,16 +7,16 @@ import {
   LegendComponent,
   LegendComponentOption,
   GridComponent,
-  GridComponentOption,
-} from 'echarts/components';
+  GridComponentOption
+} from 'echarts/components'
 import {
   PieChart,
   PieSeriesOption,
   BarChart,
-  BarSeriesOption,
-} from 'echarts/charts';
-import { LabelLayout } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
+  BarSeriesOption
+} from 'echarts/charts'
+import { LabelLayout } from 'echarts/features'
+import { CanvasRenderer } from 'echarts/renderers'
 
 echarts.use([
   TitleComponent,
@@ -26,8 +26,8 @@ echarts.use([
   CanvasRenderer,
   LabelLayout,
   GridComponent,
-  BarChart,
-]);
+  BarChart
+])
 
 type PieChartOption = echarts.ComposeOption<
   | TitleComponentOption
@@ -36,26 +36,26 @@ type PieChartOption = echarts.ComposeOption<
   | PieSeriesOption
   | GridComponentOption
   | BarSeriesOption
->;
+>
 
 type BarChartOption = echarts.ComposeOption<
   TooltipComponentOption | GridComponentOption | BarSeriesOption
->;
+>
 
-export default echarts;
+export default echarts
 
 export const echart1: PieChartOption = {
   title: {
     text: 'Referer of a Website',
     subtext: 'Fake Data',
-    left: 'center',
+    left: 'center'
   },
   tooltip: {
-    trigger: 'item',
+    trigger: 'item'
   },
   legend: {
     orient: 'vertical',
-    left: 'left',
+    left: 'left'
   },
   series: [
     {
@@ -67,52 +67,52 @@ export const echart1: PieChartOption = {
         { value: 735, name: 'Direct' },
         { value: 580, name: 'Email' },
         { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' },
+        { value: 300, name: 'Video Ads' }
       ],
       emphasis: {
         itemStyle: {
           shadowBlur: 10,
           shadowOffsetX: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)',
-        },
-      },
-    },
-  ],
-};
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+}
 
 export const echart2: BarChartOption = {
   tooltip: {
     trigger: 'axis',
     axisPointer: {
-      type: 'shadow',
-    },
+      type: 'shadow'
+    }
   },
   grid: {
     left: '3%',
     right: '4%',
     bottom: '3%',
-    containLabel: true,
+    containLabel: true
   },
   xAxis: [
     {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       axisTick: {
-        alignWithLabel: true,
-      },
-    },
+        alignWithLabel: true
+      }
+    }
   ],
   yAxis: [
     {
-      type: 'value',
-    },
+      type: 'value'
+    }
   ],
   series: [
     {
       name: 'Direct',
       type: 'bar',
       barWidth: '80%',
-      data: [10, 52, 200, 334, 390, 330, 220],
-    },
-  ],
-};
+      data: [10, 52, 200, 334, 390, 330, 220]
+    }
+  ]
+}

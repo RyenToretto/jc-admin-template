@@ -1,8 +1,8 @@
-import 'vue-router';
+import 'vue-router'
 
 declare module 'vue-router' {
   interface RouteMeta {
-    auth?: boolean;
-    guest?: boolean;
+    auth?: boolean
+    guest?: boolean
   }
 }

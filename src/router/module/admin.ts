@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router'
 
 export default {
   name: 'admin',
@@ -8,7 +8,7 @@ export default {
     {
       name: 'admin.home',
       path: 'home',
-      component: () => import('@/views/admin/home.vue'),
-    },
-  ],
-} as RouteRecordRaw;
+      component: () => import('@/views/admin/home.vue')
+    }
+  ]
+} as RouteRecordRaw

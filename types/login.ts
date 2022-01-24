@@ -1,3 +1,3 @@
 interface LoginInterface {
-  token: string;
+  token: string
 }

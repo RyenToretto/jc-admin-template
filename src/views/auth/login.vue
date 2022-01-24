@@ -44,12 +44,12 @@
 </template>
 
 <script setup lang="ts">
-import v from '@/plugins/validate';
-import { requestLogin } from '@/api';
-import { store } from '@/utils';
-import { useRouter } from 'vue-router';
+import v from '@/plugins/validate'
+import { requestLogin } from '@/api'
+import { store } from '@/utils'
+import { useRouter } from 'vue-router'
 
-const { Form, Field, ErrorMessage } = v;
+const { Form, Field, ErrorMessage } = v
 
 // :rules="{ required: true, email: true }" (Field component)
 // const schema = v.yup.object({
@@ -57,22 +57,22 @@ const { Form, Field, ErrorMessage } = v;
 //   password: v.yup.string().required().min(3).label('密码'),
 // });
 
-const router = useRouter();
+const router = useRouter()
 const schema = {
   account: { required: true, regex: /.+@.+|\d{11}/i },
-  password: { required: true, min: 3 },
-};
+  password: { required: true, min: 3 }
+}
 
 const onSubmit = async (value: any) => {
   const {
-    data: { token },
-  } = await requestLogin();
+    data: { token }
+  } = await requestLogin()
   store.set('token', {
     token,
-    expire: 10000,
-  });
-  await router.push({ name: 'home' });
-};
+    expire: 10000
+  })
+  await router.push({ name: 'home' })
+}
 </script>
 
 <script lang="ts">
@@ -80,10 +80,10 @@ export default {
   route: {
     name: 'login',
     meta: {
-      guest: true,
-    },
-  },
-};
+      guest: true
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

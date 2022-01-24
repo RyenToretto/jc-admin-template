@@ -1,6 +1,6 @@
-import Axios from './Axios';
+import Axios from './Axios'
 
 export const http = new Axios({
   baseURL: '/api',
-  timeout: 60000,
-});
+  timeout: 60000
+})

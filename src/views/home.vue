@@ -15,9 +15,9 @@
 <script lang="ts">
 export default {
   route: {
-    name: 'home',
-  },
-};
+    name: 'home'
+  }
+}
 </script>
 
 <style lang="scss" scoped>

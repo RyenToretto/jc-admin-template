@@ -13,12 +13,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const links = ref<{ title: string }[]>([
   { title: '编辑器' },
   { title: '订单列表' },
   { title: '用户管理' },
-  { title: '销售总额' },
-]);
+  { title: '销售总额' }
+])
 </script>

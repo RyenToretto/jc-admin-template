@@ -1,5 +1,5 @@
 interface User {
-  name: string;
-  age: number;
-  avatar: string;
+  name: string
+  age: number
+  avatar: string
 }

@@ -1,11 +1,11 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 
 export default class Axios {
-  private instance: AxiosInstance;
+  private instance: AxiosInstance
   constructor(config: AxiosRequestConfig) {
-    this.instance = axios.create(config);
+    this.instance = axios.create(config)
 
-    this.interceptors();
+    this.interceptors()
   }
 
   public async request<T, D = ResponseResult<T>>(
@@ -13,38 +13,38 @@ export default class Axios {
   ): Promise<D> {
     return new Promise(async (resolve, reject) => {
       try {
-        const response = await this.instance.request<D>(config);
-        resolve(response.data);
+        const response = await this.instance.request<D>(config)
+        resolve(response.data)
       } catch (error) {
-        reject(error);
+        reject(error)
       }
-    });
+    })
   }
 
   private interceptors() {
-    this.requestIntereptor();
-    this.responseInterceptor();
+    this.requestIntereptor()
+    this.responseInterceptor()
   }
 
   private requestIntereptor() {
     this.instance.interceptors.request.use(
       (config) => {
-        return config;
+        return config
       },
       (error) => {
-        return Promise.reject(error);
+        return Promise.reject(error)
       }
-    );
+    )
   }
 
   private responseInterceptor() {
     this.instance.interceptors.response.use(
       (response) => {
-        return response;
+        return response
       },
       (error) => {
-        return Promise.reject(error);
+        return Promise.reject(error)
       }
-    );
+    )
   }
 }

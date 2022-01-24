@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import MenuComponent from './admin/menu.vue';
-import Navbar from './admin/navbar.vue';
-import HistoryLink from './admin/historyLink.vue';
+import MenuComponent from './admin/menu.vue'
+import Navbar from './admin/navbar.vue'
+import HistoryLink from './admin/historyLink.vue'
 </script>
 
 <template>
@@ -21,10 +21,10 @@ import HistoryLink from './admin/historyLink.vue';
 export default {
   route: {
     meta: {
-      auth: true,
-    },
-  },
-};
+      auth: true
+    }
+  }
+}
 </script>
 
 <style lang="scss"></style>

@@ -11,13 +11,13 @@
 const props = defineProps({
   modelValue: {
     type: String,
-    default: '',
-  },
-});
+    default: ''
+  }
+})
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: string): void;
-}>();
+  (e: 'update:modelValue', value: string): void
+}>()
 </script>
 
 <style lang="scss" scoped></style>

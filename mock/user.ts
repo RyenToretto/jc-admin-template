@@ -1,5 +1,5 @@
-import { Random } from 'mockjs';
-import { MockMethod } from 'vite-plugin-mock';
+import { Random } from 'mockjs'
+import { MockMethod } from 'vite-plugin-mock'
 
 export default [
   {
@@ -13,10 +13,10 @@ export default [
         data: {
           name: 'Jerry Chen',
           age: 18,
-          avatar: 'avatar.jpg',
-        },
-      };
-    },
+          avatar: 'avatar.jpg'
+        }
+      }
+    }
   },
   {
     url: '/api/login',
@@ -27,9 +27,9 @@ export default [
         message: '登录成功',
         type: 'success',
         data: {
-          token: Random.string(10),
-        },
-      };
-    },
-  },
-] as MockMethod[];
+          token: Random.string(10)
+        }
+      }
+    }
+  }
+] as MockMethod[]

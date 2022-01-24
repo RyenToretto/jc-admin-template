@@ -7,9 +7,9 @@ import { onMounted } from 'vue'
 import { requestUserInfo } from '@/api'
 import { env } from '@/utils'
 
-console.log(env)
+console.log('env =', env)
 onMounted(async () => {
   const response = await requestUserInfo()
-  console.log(response.data)
+  console.log('request User Info =', response.data)
 })
 </script>

@@ -1,6 +1,8 @@
 # Vue 3 + Typescript + Vite
 
-这个模板应该可以帮助你开始在 Vite 中使用 Vue 3 和 Typescript 进行开发。 该模板使用 Vue 3 `<script setup>` SFCs，查看[script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) 了解更多。
+- 这个模板应该可以帮助你开始在 Vite 中使用 Vue 3 和 Typescript 进行开发。
+- 该模板使用 Vue 3 单文件组件 `<script setup>` SFCs 开发
+- 查看 [script setup docs](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95) 了解更多。
 
 ## 推荐的编辑器配置
 

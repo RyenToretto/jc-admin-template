@@ -17,7 +17,14 @@ const configFn: UserConfigFn = ({ command, mode }: ConfigEnv) => {
       host: '127.0.0.1',
       port: env.VITE_APP_PORT,
       strictPort: false,
-      open: `http://${getMyIp()}:${env.VITE_APP_PORT}/#/`
+      open: `http://${getMyIp()}:${env.VITE_APP_PORT}/#/`,
+      proxy: {
+        '/api': {
+          target: 'https://my-json-server.typicode.com',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '/ryentoretto/demo')
+        }
+      }
     }
   }
 }

@@ -15,9 +15,9 @@ const configFn: UserConfigFn = ({ command, mode }: ConfigEnv) => {
     clearScreen: false, // 设为 false 可以避免 Vite 清屏而错过在终端中打印某些关键信息
     server: {
       host: '127.0.0.1',
-      port: 8900,
+      port: env.VITE_APP_PORT,
       strictPort: false,
-      open: `http://${getMyIp()}:8900/#/`
+      open: `http://${getMyIp()}:${env.VITE_APP_PORT}/#/`
     }
   }
 }

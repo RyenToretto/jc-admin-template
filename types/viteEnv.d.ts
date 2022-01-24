@@ -1,6 +1,6 @@
 interface ViteEnv {
   VITE_ROUTE_AUTOLOAD: boolean
-  VITE_API_URL: string
+  VITE_APP_PORT: number
 }
 
 // Support type hints for env variables in components

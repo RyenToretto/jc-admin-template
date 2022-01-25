@@ -1,8 +1,21 @@
 module.exports = {
-  singleQuote: true,
+  printWidth: 120,
+  tabWidth: 2,
   useTabs: false,
   semi: false,
+  singleQuote: true,
+  arrowParens: 'avoid',
+  proseWrap: 'preserve',
   bracketSpacing: true,
+  disableLanguages: ['vue'],
+  endOfLine: 'lf',
+  eslintIntegration: true,
+  htmlWhitespaceSensitivity: 'ignore',
+  ignorePath: '.prettierignore',
+  jsxBracketSameLine: false,
+  jsxSingleQuote: false,
+  requireConfig: false,
+  stylelintIntegration: true,
   trailingComma: 'none',
-  endOfLine: 'lf'
+  tslintIntegration: true
 }

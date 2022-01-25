@@ -9,7 +9,7 @@ export function setupPlugins(app: App) {
 
 function autoRegisterComponent(app: App) {
   const components = import.meta.globEager('../components/form/*.vue')
-  Object.keys(components).forEach((key) => {
+  Object.keys(components).forEach(key => {
     const name = key.split('/').pop()?.split('.').shift() as string
     app.component(camelCase(name), components[key].default)
   })

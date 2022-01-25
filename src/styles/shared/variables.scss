@@ -1,0 +1,38 @@
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$primary: #348fe4 !default;
+$primary-hover: #1e83e1 !default;
+$primary-dark: #358fe5 !default;
+$primary-dark-hover: #2082e1 !default;
+
+$primary-btn-shadow: rgba(53, 143, 229, 0.47) !default;
+$primary-switch-border-color: rgba(52, 143, 228, 0.2) !default;
+
+$primary-project: $primary-dark !default;
+$primary-project-hover-bg: rgba(53, 143, 229, 0.08) !default;
+
+$primary-okr: #ff9f00 !default;
+$primary-okr-hover-bg: rgba(255, 159, 0, 0.06) !default;
+
+$primary-dev: #00dbba !default;
+$primary-dev-hover-bg: rgba(0, 219, 186, 0.06) !default;
+
+$gray-70: #fdfdfd !default; // 内容区域背景色，用于整个内容的背景色，sidebar 背景色
+$gray-80: #fafafa !default; // 选项鼠标移上去的背景色，主要用于表格 Hover 移上去的颜色 和表格的编号背景色,
+$gray-100: #f3f3f3 !default; // 搜索框背景色，消息栏置顶色, 完成任务卡片颜色， Popbox Menu 移上去的背景色
+$gray-200: #eeeeee !default; // 模块左侧导航鼠标移上去的阴影, 次分割线，部分控件描边, 消息评论图标使用
+$gray-210: #e9e9e9 !default; // 整块区域的背景色为 #f3f3f3 后，某个卡片模块的背景色，用于文件详情
+$gray-300: #dddddd !default; // 主分割线, 进度条背景色，三级图标色
+$gray-400: #cacaca !default; // 搜索框默认文字， 禁用图标颜色, 部分图标颜色,
+$gray-500: #aaaaaa !default; // 添加参与人,负责人等操作图标的边框颜色,说明文字, 搜索框文字
+$gray-600: #888888 !default; // 次要文字,如 Tab 切换文字
+$gray-700: #666666 !default; // 主要文字
+$gray-800: #333333 !default; // 标题和重点文字
+
+$font-family-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial,
+Hiragino Sans GB, sans-serif;
+$wrapper-width: 1200px !default;
+$placeholder-color: #888a9e !default;
+$hover-link-deep: $primary-hover !default;
+$icon-color: #a5a5a5 !default;

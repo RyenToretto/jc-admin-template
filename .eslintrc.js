@@ -1,11 +1,11 @@
-const { defineConfig } = require('eslint-define-config');
+const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -13,23 +13,24 @@ module.exports = defineConfig({
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   plugins: ['prettier'],
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
-    withDefaults: 'readonly',
+    withDefaults: 'readonly'
   },
   rules: {
+    'prettier/prettier': ['error', { tabWidth: 2 }],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'vue/script-setup-uses-vars': 'error',
@@ -46,6 +47,6 @@ module.exports = defineConfig({
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-  },
-});
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
+  }
+})

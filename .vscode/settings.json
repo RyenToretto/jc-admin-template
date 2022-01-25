@@ -1,15 +1,47 @@
 {
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.fontSize": 14,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": -1,
+  "editor.mouseWheelZoom": true,
+  "workbench.iconTheme": "vscode-icons",
+  "git.enableSmartCommit": true,
+  "editor.hover.delay": 0,
+  "editor.tabSize": 2,
+  "minapp-vscode.disableAutoConfig": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+  "eslint.validate": [
+    "javascript", {
+      "language": "vue",
+      "autoFix": true
+    },
+    "vue", "html"],
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-aligned"
     }
+  },
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertNewLineAroundImports": false,
+  "stylusSupremacy.insertNewLineAroundBlocks": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "editor.formatOnType": true,
+  "files.autoSave": "onFocusChange",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -17,23 +49,67 @@
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[scss]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.proseWrap": "preserve",
+  "prettier.bracketSpacing": true,
+  "prettier.disableLanguages": ["vue"],
+  "prettier.endOfLine": "lf",
+  "prettier.eslintIntegration": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.ignorePath": ".prettierignore",
+  "prettier.jsxBracketSameLine": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.requireConfig": false,
+  "prettier.stylelintIntegration": true,
+  "prettier.trailingComma": "none",
+  "prettier.tslintIntegration": true,
+  "fileheader.configObj": {
+    "createFileTime": true,
+    "autoAdd": true,
+    "annotationStr": {
+      "head": "/*",
+      "middle": " * @",
+      "end": " */",
+      "use": true
+    },
+    "headInsertLine": {
+      "php": 2
+    }
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "fileheader.cursorMode": {
+    "description":"",
+    "param ":"",
+    "return":""
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "fileheader.customMade": {
+    "Description":"" ,
+    "Author":"koujianfeng",
+    "Date": "Do not edit",
+    "LastEditTime": "Do not edit",
+    "LastEditors": "koujianfeng",
+    "LastModifiedBy": "koujianfeng"
   },
-  "scss.validate": false,
-  "css.validate": false,
-  "css.lint.unknownAtRules": "ignore",
-  "path-intellisense.mappings": {
-    "@": "${workspaceRoot}/src",
-    "#": "${workspaceRoot}/types"
-  }
+  "editor.wordWrap": "on",
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[js]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "eslint.autoFixOnSave": true,
+  "javascript.format.enable": true,
 }

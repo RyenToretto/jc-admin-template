@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "isolatedModules": true,
+    "isolatedModules": false,
     "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -12,24 +12,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "typeRoots": [
-      "./node_modules/@types/",
-      "./types"
-    ],
-    "types": [
-      "vite/client"
-    ],
+    "lib": ["esnext", "dom"],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    "types": ["vite/client"],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "#/*": [
-        "./types/*"
-      ]
+      "@/*": ["./src/*"],
+      "#/*": ["./types/*"]
     }
   },
   "include": [

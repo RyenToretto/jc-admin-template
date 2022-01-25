@@ -1,10 +1,5 @@
 <template>
-  <Form
-    v-slot="{ errors }"
-    class="login-form"
-    :validation-schema="schema"
-    @submit="onSubmit"
-  >
+  <Form v-slot="{ errors }" class="login-form" :validation-schema="schema" @submit="onSubmit">
     <div class="login-content">
       <div class="login-info">
         <div>
@@ -18,13 +13,7 @@
               placeholder="请输入邮箱或者手机号"
             />
             <p v-if="errors.account" class="jc-error">请输入邮箱或者手机号</p>
-            <Field
-              name="password"
-              class="jc-input mt-3"
-              label="密码"
-              value="admin888"
-              type="password"
-            />
+            <Field name="password" class="jc-input mt-3" label="密码" value="admin888" type="password" />
             <ErrorMessage name="password" as="p" class="jc-error" />
           </div>
           <jc-button class="mt-5 w-full" />

@@ -9,12 +9,7 @@ import {
   GridComponent,
   GridComponentOption
 } from 'echarts/components'
-import {
-  PieChart,
-  PieSeriesOption,
-  BarChart,
-  BarSeriesOption
-} from 'echarts/charts'
+import { PieChart, PieSeriesOption, BarChart, BarSeriesOption } from 'echarts/charts'
 import { LabelLayout } from 'echarts/features'
 import { CanvasRenderer } from 'echarts/renderers'
 
@@ -38,9 +33,7 @@ type PieChartOption = echarts.ComposeOption<
   | BarSeriesOption
 >
 
-type BarChartOption = echarts.ComposeOption<
-  TooltipComponentOption | GridComponentOption | BarSeriesOption
->
+type BarChartOption = echarts.ComposeOption<TooltipComponentOption | GridComponentOption | BarSeriesOption>
 
 export default echarts
 

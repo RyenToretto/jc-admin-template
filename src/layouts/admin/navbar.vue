@@ -6,14 +6,9 @@
     </el-breadcrumb>
 
     <div class="flex justify-center items-center relative group cursor-pointer">
-      <img
-        src="/images/avatar.jpeg"
-        class="w-8 h-8 rounded-full object-cover"
-      />
+      <img src="/images/avatar.jpeg" class="w-8 h-8 rounded-full object-cover" />
       <span class="ml-1 text-sm text-gray-600">Jerry Chen</span>
-      <section
-        class="group-hover:block absolute top-full bg-white shadow-sm px-5 whitespace-nowrap rounded-md hidden"
-      >
+      <section class="group-hover:block absolute top-full bg-white shadow-sm px-5 whitespace-nowrap rounded-md hidden">
         <div class="flex items-center cursor-pointer border-b py-3">
           <a class="fas fa-home"></a>
           <span class="text-xs text-gray-600 ml-2">文档资料</span>

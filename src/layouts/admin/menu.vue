@@ -13,18 +13,10 @@
             <span>{{ menu.title }}</span>
           </section>
           <section>
-            <i
-              class="fas fa-angle-down duration-300"
-              :class="{ 'rotate-180': menu.active }"
-            ></i>
+            <i class="fas fa-angle-down duration-300" :class="{ 'rotate-180': menu.active }"></i>
           </section>
         </dt>
-        <dd
-          v-for="(cmenu, key) of menu.children"
-          v-show="menu.active"
-          :key="key"
-          :class="{ active: cmenu.active }"
-        >
+        <dd v-for="(cmenu, key) of menu.children" v-show="menu.active" :key="key" :class="{ active: cmenu.active }">
           {{ cmenu.title }}
         </dd>
       </dl>
@@ -40,11 +32,7 @@ const menus = ref<IMenu[]>([
     title: '错误页面',
     icon: 'fab fa-algolia',
     active: true,
-    children: [
-      { title: '404页面', active: true },
-      { title: '403页面' },
-      { title: '500页面' }
-    ]
+    children: [{ title: '404页面', active: true }, { title: '403页面' }, { title: '500页面' }]
   },
   {
     title: '编辑器',
@@ -54,9 +42,9 @@ const menus = ref<IMenu[]>([
 ])
 
 const resetMenus = () => {
-  menus.value.forEach((pmenu) => {
+  menus.value.forEach(pmenu => {
     pmenu.active = false
-    pmenu.children?.forEach((m) => (m.active = false))
+    pmenu.children?.forEach(m => (m.active = false))
   })
 }
 const handle = (pmenu: IMenuItem, cmenu?: IMenuItem) => {

@@ -8,10 +8,12 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "esfix": "eslint '*/**/*.{js,ts,tsx,vue}' --fix"
+    "esfix": "eslint '*/**/*.{js,ts,tsx,vue}' --fix",
+    "format": "prettier --write \"*.js\" \"*/**/*.ts\" \"*/**/*.vue\" \"*json\""
   },
   "lint-staged": {
     "*.{ts,js,vue}": [
+      "prettier --write",
       "eslint --fix",
       "git add ."
     ]

@@ -2,24 +2,18 @@
   <Form v-slot="{ errors }" class="login-form" :validation-schema="schema" @submit="onSubmit">
     <div class="login-content">
       <div class="login-info">
-        <div>
-          <h2 class="login-info">登陆页</h2>
+        <div class="login-card">
+          <h2 class="login-title">登陆页</h2>
           <div class="login-detail">
-            <Field
-              name="account"
-              class="jc-input"
-              label="账号"
-              value="caffreygo@163.com"
-              placeholder="请输入邮箱或者手机号"
-            />
-            <p v-if="errors.account" class="jc-error">请输入邮箱或者手机号</p>
-            <Field name="password" class="jc-input mt-3" label="密码" value="admin888" type="password" />
-            <ErrorMessage name="password" as="p" class="jc-error" />
+            <Field name="account" class="login-input account-input" label="账号" value="" placeholder="请输入邮箱" />
+            <p v-if="errors.account" class="login-error account-error">请输入邮箱或者手机号</p>
+            <Field name="password" class="login-input password-input" label="密码" value="" type="password" />
+            <ErrorMessage name="password" as="p" class="login-error password-error" />
           </div>
-          <jc-button class="mt-5 w-full" />
+          <jc-button />
           <div class="wechat-login"><i class="fab fa-weixin"></i></div>
         </div>
-        <div class="flex gap-2 justify-center mt-5">
+        <div class="login-bottom">
           <jc-link />
           <jc-link />
           <jc-link />
@@ -76,7 +70,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-form {
-  @apply bg-slate-300 h-screen flex justify-center items-start md:items-center p-5;
+.login-form {
+  box-sizing: border-box;
+  padding: 30px 0;
+  min-height: 100vh;
+  background-color: rgb(203, 213, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-content {
+    box-sizing: border-box;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
+      rgba(0, 0, 0, 0.1) 0 2px 4px -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-info {
+      box-sizing: border-box;
+      padding: 24px;
+      width: 360px;
+      height: 332px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .login-card {
+        box-sizing: border-box;
+        .login-title {
+        }
+        .login-detail {
+        }
+        .wechat-login {
+        }
+      }
+      .login-bottom {
+        box-sizing: border-box;
+        > a {
+          padding: 0 4px;
+        }
+      }
+    }
+    .login-log {
+      box-sizing: border-box;
+      width: 360px;
+      height: 332px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>

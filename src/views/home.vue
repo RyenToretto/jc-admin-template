@@ -20,6 +20,7 @@ export default {
 .home-page {
   box-sizing: border-box;
   padding: 30px 0;
+  min-height: 100vh;
   background-color: rgb(55, 65, 81);
   .home-page-photo {
     display: block;
@@ -32,11 +33,12 @@ export default {
   }
   .home-btn-box {
     box-sizing: border-box;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    .home-btn {
-      padding: 6px 12px;
+    .home-to-login {
+      margin-left: 6px;
     }
   }
 }

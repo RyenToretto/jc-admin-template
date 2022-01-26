@@ -1,11 +1,11 @@
 <template>
-  <div class="menu w-[200px] bg-gray-800 p-4">
-    <div class="logo text-gray-300 flex items-center">
-      <i class="fas fa-robot text-fuchsia-300 mr-2 text-[25px]"></i>
+  <div class="menu">
+    <div class="logo-box">
+      <i class="fas fa-robot"></i>
       <span class="text-md">Hello world ~</span>
     </div>
     <!-- menu -->
-    <div class="left-container">
+    <div class="menu-container">
       <dl v-for="(menu, index) of menus" :key="index">
         <dt @click="handle(menu)">
           <section class="flex items-center">
@@ -13,7 +13,7 @@
             <span>{{ menu.title }}</span>
           </section>
           <section>
-            <i class="fas fa-angle-down duration-300" :class="{ 'rotate-180': menu.active }"></i>
+            <i class="fas fa-angle-down" :class="{ 'rotate-180': menu.active }"></i>
           </section>
         </dt>
         <dd v-for="(cmenu, key) of menu.children" v-show="menu.active" :key="key" :class="{ active: cmenu.active }">
@@ -55,25 +55,12 @@ const handle = (pmenu: IMenuItem, cmenu?: IMenuItem) => {
 
 <style scoped lang="scss">
 .menu {
-  .left-container {
-    dl {
-      @apply text-gray-300 text-sm;
-      dt {
-        @apply text-base mt-4 flex justify-between items-center cursor-pointer;
-        section {
-          @apply flex items-center;
-          i {
-            @apply mr-2 text-lg;
-          }
-        }
-      }
-      dd {
-        @apply py-2 pl-4 my-2 rounded-md cursor-pointer hover:bg-violet-500 duration-300 bg-gray-700;
-        &.active {
-          @apply bg-violet-700 text-white;
-        }
-      }
-    }
-  }
+  box-sizing: border-box;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+  border: 0 solid rgba(229, 231, 235, 1);
+  background-color: rgba(31, 41, 55, 1);
+  color: rgba(209, 213, 219, 1);
 }
 </style>

@@ -5,12 +5,14 @@ import HistoryLink from './admin/historyLink.vue'
 </script>
 
 <template>
-  <div class="admin min-h-screen w-screen flex">
-    <menu-component class="hidden md:block" />
-    <div class="content bg-gray-100 flex-1">
+  <div class="admin">
+    <menu-component />
+    <div class="content">
       <navbar />
+
       <history-link />
-      <div class="m-4">
+
+      <div class="page-wrapper">
         <router-view />
       </div>
     </div>
@@ -27,4 +29,19 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.admin {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .content {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(243, 244, 246, 1);
+    flex: 1;
+  }
+}
+</style>

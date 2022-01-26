@@ -100,11 +100,49 @@ export default {
       align-items: center;
       .login-card {
         box-sizing: border-box;
+        width: 100%;
         .login-title {
+          line-height: 1.5;
+          text-align: center;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+            Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+          font-size: 18px;
+          font-weight: 400;
+          color: rgba(55, 65, 81, 1);
         }
         .login-detail {
+          box-sizing: border-box;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          .login-input {
+            box-sizing: border-box;
+            margin: 4px 0;
+            padding: 4px 8px;
+            width: 100%;
+            border: 1px solid rgb(229, 231, 235);
+            border-radius: 2px;
+          }
+        }
+        .jc-button {
+          box-sizing: border-box;
+          margin: 20px 0 12px;
+          width: 100%;
         }
         .wechat-login {
+          box-sizing: border-box;
+          margin: 0 auto;
+          padding: 4px;
+          width: 26px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: rgb(22, 163, 74);
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
       .login-bottom {

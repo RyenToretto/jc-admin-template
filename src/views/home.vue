@@ -1,12 +1,17 @@
 <template>
   <div class="home-page">
-    <img class="home-page-photo" src="/images/home.jpg" alt="" />
+    <!-- <img class="home-page-photo" src="/images/home.jpg" alt="" /> -->
+    <img class="home-page-photo" src="https://avatars.githubusercontent.com/u/32086611?v=4" alt="" />
+
     <div class="home-btn-box">
       <router-link class="home-to-admin btn" :to="{ name: 'admin.home' }">后台管理</router-link>
       <router-link class="home-to-login btn btn-outline" :to="{ name: 'login' }">用户登录</router-link>
     </div>
-    <p class="word">{{ msg }}</p>
-    <button @click="changeColor">click me</button>
+
+    <div class="word">
+      <el-card shadow="hover">msg</el-card>
+      <el-button type="primary" @click="changeColor">click me</el-button>
+    </div>
   </div>
 </template>
 
@@ -31,7 +36,20 @@ const changeColor = () => {
   min-height: 100vh;
   background-color: rgb(55, 65, 81);
   .word {
-    background: v-bind(color);
+    box-sizing: border-box;
+    margin: 30px auto 0;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > .el-card {
+      background: v-bind(color);
+      color: #fff;
+    }
+    > .el-button {
+      margin-top: 10px;
+    }
   }
   .home-page-photo {
     display: block;

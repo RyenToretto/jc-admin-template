@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <!-- <img class="home-page-photo" src="/images/home.jpg" alt="" /> -->
     <img class="home-page-photo" src="https://avatars.githubusercontent.com/u/32086611?v=4" alt="" />
 
     <div class="home-btn-box">

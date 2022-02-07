@@ -13,8 +13,15 @@
           <DoLink />
         </div>
       </div>
+
       <div class="login-log">
-        <img src="/images/login.jpg" alt="" />
+        <div class="log-item">
+          <img src="/images/login.jpg" alt="" />
+        </div>
+
+        <div class="log-item">
+          <img class="home-page-photo" src="@/assets/home.jpg" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -63,6 +70,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
   .login-content {
     box-sizing: border-box;
     border-radius: 6px;
@@ -142,10 +150,21 @@ export default {
       width: 360px;
       height: 332px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      > img {
+      .log-item {
+        box-sizing: border-box;
         width: 100%;
+        height: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > img {
+          width: 100%;
+          -webkit-user-drag: none;
+        }
       }
     }
   }

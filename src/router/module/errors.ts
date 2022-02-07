@@ -7,17 +7,17 @@ export default {
   children: [
     {
       name: 'error.404',
-      path: '404',
+      path: '/error/404',
       component: () => import('@/views/errors/404.vue')
     },
     {
       name: 'error.403',
-      path: '403',
+      path: '/error/403',
       component: () => import('@/views/errors/403.vue')
     },
     {
       name: 'error.500',
-      path: '500',
+      path: '/error/500',
       component: () => import('@/views/errors/500.vue')
     }
   ]

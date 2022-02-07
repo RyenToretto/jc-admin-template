@@ -3,7 +3,9 @@
 
   <div class="home-btn-box">
     <router-link class="home-to-admin btn" :to="{ name: 'admin.home' }">后台管理</router-link>
-    <router-link class="home-to-login btn btn-outline" :to="{ name: 'login' }">用户登录</router-link>
+    <router-link v-if="!doLocal.get('token')?.token" class="home-to-login btn btn-outline" :to="{ name: 'auth.login' }">
+      用户登录
+    </router-link>
   </div>
 
   <div class="word">
@@ -14,6 +16,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { doLocal } from '@/utils'
 
 const msg = 'Hello World!'
 let color = ref('red')

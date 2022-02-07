@@ -53,9 +53,10 @@ const toLogin = async () => {
 <script lang="ts">
 export default {
   route: {
-    name: 'login',
+    name: 'auth.login',
     meta: {
-      guest: true
+      guest: true,
+      backgroundColor: '#cbd5e1'
     }
   }
 }

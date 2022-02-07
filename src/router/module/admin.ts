@@ -7,7 +7,7 @@ export default {
   children: [
     {
       name: 'admin.home',
-      path: 'home',
+      path: '/admin/home',
       component: () => import('@/views/admin/home.vue')
     }
   ]

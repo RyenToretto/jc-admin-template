@@ -22,7 +22,18 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss">
+<script lang="ts">
+export default {
+  route: {
+    name: 'errors.404',
+    meta: {
+      backgroundColor: '#f00'
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .text-9xl {
   font-size: 14rem;
 }

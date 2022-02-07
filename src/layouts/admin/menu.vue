@@ -53,7 +53,7 @@ const handle = (pmenu: IMenuItem, cmenu?: IMenuItem) => {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .menu {
   box-sizing: border-box;
   width: 200px;

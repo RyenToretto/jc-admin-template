@@ -4,11 +4,11 @@ export default {
   name: 'auth',
   path: '/auth',
   component: () => import('@/layouts/auth.vue'),
-  redirect: '/login',
+  redirect: '/auth/login',
   children: [
     {
-      name: 'login',
-      path: '/login',
+      name: 'auth.login',
+      path: '/auth/login',
       meta: {
         backgroundColor: '#cbd5e1'
       },

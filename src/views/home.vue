@@ -30,7 +30,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
     background-color: #374151;
     .home-info {
       box-sizing: border-box;
-      padding-top: 30px;
+      padding: 30px 0;
       position: sticky;
       top: 0;
     }

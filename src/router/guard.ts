@@ -22,7 +22,7 @@ class Guard {
       // handling login and verification
       const token = doLocal.get('token')?.token
       if (!Guard.isLogin(to, token)) {
-        return { name: 'login' }
+        return { name: 'auth.login' }
       }
 
       if (!Guard.isGuest(to, token)) {

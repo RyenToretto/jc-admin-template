@@ -76,4 +76,15 @@ const cards = ref<ICard[]>([
 ])
 </script>
 
-<style scoped></style>
+<script lang="ts">
+export default {
+  route: {
+    name: 'admin.home',
+    meta: {
+      backgroundColor: '#f3f4f6'
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped></style>

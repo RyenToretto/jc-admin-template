@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .admin {
   box-sizing: border-box;
   height: 100vh;

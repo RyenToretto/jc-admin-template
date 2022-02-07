@@ -66,7 +66,6 @@ export default {
   box-sizing: border-box;
   padding: 30px 0;
   min-height: 100vh;
-  background-color: rgb(203, 213, 225);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -164,7 +164,7 @@ a:hover {
 html {
   -webkit-text-size-adjust: none;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.5;
   font-weight: normal;
   background: $white;
 }
@@ -182,9 +182,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.7rem;
-  line-height: 1.3;
-  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
 }
 
 canvas,

@@ -9,6 +9,9 @@ export default {
     {
       name: 'login',
       path: '/login',
+      meta: {
+        backgroundColor: '#cbd5e1'
+      },
       component: () => import('@/views/auth/login.vue')
     }
   ]

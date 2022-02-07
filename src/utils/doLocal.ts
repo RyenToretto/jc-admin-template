@@ -1,4 +1,4 @@
-export default {
+const doLocal = {
   set(key: string, data: IData) {
     if (data.expire) {
       data.expire = new Date().getTime() + data.expire * 1000
@@ -19,3 +19,4 @@ export default {
     }
   }
 }
+export default doLocal

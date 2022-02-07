@@ -1,4 +1,4 @@
-import env from './env'
-import store from './store'
+import doEnv from './doEnv'
+import doLocal from './doLocal'
 
-export { env, store }
+export { doEnv, doLocal }

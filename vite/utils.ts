@@ -20,7 +20,6 @@ export const getMyIp = (): string | undefined => {
   for (const attr of Object.keys(ifaces)) {
     for (const info of ifaces[attr] as NetworkInterfaceInfo[]) {
       if (info.family === 'IPv4' && info.address !== '127.0.0.1') {
-        console.log(info.address)
         return info.address
       }
     }

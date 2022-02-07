@@ -1,56 +1,37 @@
 <template>
-  <Form v-slot="{ errors }" class="login-form" :validation-schema="schema" @submit="onSubmit">
+  <div class="login-form">
     <div class="login-content">
       <div class="login-info">
         <div class="login-card">
           <h2 class="login-title">登陆页</h2>
-          <div class="login-detail">
-            <Field name="account" class="login-input account-input" label="账号" value="" placeholder="请输入邮箱" />
-            <p v-if="errors.account" class="login-error account-error">请输入邮箱或者手机号</p>
-            <Field name="password" class="login-input password-input" label="密码" value="" type="password" />
-            <ErrorMessage name="password" as="p" class="login-error password-error" />
-          </div>
-          <jc-button />
+          <DoButton @click="toLogin" />
           <div class="wechat-login"><i class="fab fa-weixin"></i></div>
         </div>
         <div class="login-bottom">
-          <jc-link />
-          <jc-link />
-          <jc-link />
+          <DoLink />
+          <DoLink />
+          <DoLink />
         </div>
       </div>
       <div class="login-log">
         <img src="/images/login.jpg" alt="" />
       </div>
     </div>
-  </Form>
+  </div>
 </template>
 
 <script setup lang="ts">
-import v from '@/plugins/validate'
 import { requestLogin } from '@/api'
-import { store } from '@/utils'
+import { doLocal } from '@/utils'
 import { useRouter } from 'vue-router'
 
-const { Form, Field, ErrorMessage } = v
-
-// :rules="{ required: true, email: true }" (Field component)
-// const schema = v.yup.object({
-//   account: v.yup.string().required().email().label('账号'),
-//   password: v.yup.string().required().min(3).label('密码'),
-// });
-
 const router = useRouter()
-const schema = {
-  account: { required: true, regex: /.+@.+|\d{11}/i },
-  password: { required: true, min: 3 }
-}
 
-const onSubmit = async (value: any) => {
+const toLogin = async () => {
   const {
     data: { token }
   } = await requestLogin()
-  store.set('token', {
+  doLocal.set('token', {
     token,
     expire: 10000
   })
@@ -126,7 +107,7 @@ export default {
             border-radius: 2px;
           }
         }
-        .jc-button {
+        .do-button {
           box-sizing: border-box;
           margin: 20px 0 12px;
           width: 100%;

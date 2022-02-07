@@ -20,9 +20,9 @@ const configFn: UserConfigFn = ({ command, mode }: ConfigEnv) => {
       open: `http://${getMyIp()}:${env.VITE_APP_PORT}/#/`,
       proxy: {
         '/api': {
-          target: 'https://my-json-server.typicode.com',
+          target: env.VITE_APP_PROXY,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '/ryentoretto/demo')
+          rewrite: path => path.replace(/^\/api/, '/ryentoretto/demo')
         }
       }
     }

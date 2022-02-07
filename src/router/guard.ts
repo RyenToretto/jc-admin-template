@@ -1,4 +1,4 @@
-import { store } from '@/utils'
+import { doLocal } from '@/utils'
 import { RouteLocationNormalized, Router } from 'vue-router'
 
 class Guard {
@@ -7,7 +7,7 @@ class Guard {
   public run() {
     // handling login and verification
     this.router.beforeEach((to, from) => {
-      const token = store.get('token')?.token
+      const token = doLocal.get('token')?.token
       if (!Guard.isLogin(to, token)) {
         return { name: 'login' }
       }

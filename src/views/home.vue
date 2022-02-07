@@ -5,13 +5,21 @@
       <router-link class="home-to-admin btn" :to="{ name: 'admin.home' }">后台管理</router-link>
       <router-link class="home-to-login btn btn-outline" :to="{ name: 'login' }">用户登录</router-link>
     </div>
+    <p class="word">{{ msg }}</p>
+    <button @click="changeColor">click me</button>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  route: {
-    name: 'home'
+<script setup>
+import { ref } from 'vue'
+
+const msg = 'Hello World!'
+let color = ref('red')
+const changeColor = () => {
+  if (color.value === 'black') {
+    color.value = 'red'
+  } else {
+    color.value = 'black'
   }
 }
 </script>
@@ -22,6 +30,9 @@ export default {
   padding: 30px 0;
   min-height: 100vh;
   background-color: rgb(55, 65, 81);
+  .word {
+    background: v-bind(color);
+  }
   .home-page-photo {
     display: block;
     box-sizing: border-box;

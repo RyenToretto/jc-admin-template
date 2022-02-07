@@ -21,6 +21,8 @@
 </template>
 
 <script setup lang="ts">
+import DoButton from '@/components/form/DoButton.vue'
+import DoLink from '@/components/form/DoLink.vue'
 import { requestLogin } from '@/api'
 import { doLocal } from '@/utils'
 import { useRouter } from 'vue-router'

@@ -21,11 +21,13 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+import { doLocal } from '@/utils'
+import { requestLogin } from '@/api'
+
 import DoButton from '@/components/form/DoButton.vue'
 import DoLink from '@/components/form/DoLink.vue'
-import { requestLogin } from '@/api'
-import { doLocal } from '@/utils'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 

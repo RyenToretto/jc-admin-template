@@ -1,0 +1,9 @@
+@import '../../shared';
+
+.expand-transition {
+  @include transition-default;
+}
+
+.expand-x-transition {
+  @include transition-default;
+}

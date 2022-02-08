@@ -1,16 +1,16 @@
 <template>
   <img class="home-page-photo" src="https://avatars.githubusercontent.com/u/32086611?v=4" alt="" />
 
-  <div class="home-btn-box">
-    <router-link class="home-to-admin btn" :to="{ name: 'admin.home' }">后台管理</router-link>
-    <router-link v-if="!doLocal.get('token')?.token" class="home-to-login btn btn-outline" :to="{ name: 'auth.login' }">
+  <div class="home-button-box">
+    <router-link class="home-to-admin btn btn-default" :to="{ name: 'admin.home' }">后台管理</router-link>
+    <router-link v-if="!doLocal.get('token')?.token" class="home-to-login btn btn-primary" :to="{ name: 'auth.login' }">
       用户登录
     </router-link>
   </div>
 
   <div class="word">
     <el-card shadow="hover">{{ msg }}</el-card>
-    <el-button class="btn" type="primary" @click="changeColor">click me</el-button>
+    <el-button class="btn btn-default" type="primary" @click="changeColor">click me</el-button>
   </div>
 </template>
 
@@ -39,7 +39,7 @@ const changeColor = () => {
   border: 8px solid #fff;
   border-radius: 50%;
 }
-.home-btn-box {
+.home-button-box {
   box-sizing: border-box;
   padding: 10px 0;
   display: flex;

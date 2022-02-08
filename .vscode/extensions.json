@@ -1,9 +1,11 @@
 {
   "recommendations": [
     "johnsoncodehk.volar",
-    "bradlc.vscode-tailwindcss",
     "ecmel.vscode-html-css",
     "dbaeumer.vscode-eslint",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
+    "mikestead.dotenv",
     "esbenp.prettier-vscode",
     "csstools.postcss",
     "tomasvergara.vscode-fontawesome-gallery",

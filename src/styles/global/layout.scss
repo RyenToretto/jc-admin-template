@@ -1,5 +1,34 @@
 @import '../shared';
 
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+}
+
+:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+html {
+  // header
+  --header-bg-color: #394664;
+  --header-bg-hover-color: #273352;
+  --header-active-menu-bg-color: #273352;
+
+  // sider
+  --sider-dark-bg-color: #273352;
+  --sider-dark-darken-bg-color: #273352;
+  --sider-dark-lighten-bg-color: #273352;
+
+  &.color-weak {
+    filter: invert(80%);
+  }
+
+  &.gray-mode {
+    filter: grayscale(100%);
+    filter: progid:dximagetransform.microsoft.basicimage(grayscale=1);
+  }
+}
+
 .wrapper {
   width: $wrapper-width;
   max-width: $wrapper-width;
@@ -8,5 +37,57 @@
   @media (max-width: 717px) {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+// =================================
+// ==============scrollbar==========
+// =================================
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+// ::-webkit-scrollbar-track {
+//   background: transparent;
+// }
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+::-webkit-scrollbar-thumb {
+  // background: rgba(0, 0, 0, 0.6);
+  background-color: rgb(144 147 153 / 30%);
+  // background-color: rgba(144, 147, 153, 0.3);
+  border-radius: 2px;
+  box-shadow: inset 0 0 6px rgb(0 0 0 / 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $border-color;
+}
+
+// =================================
+// ==============nprogress==========
+// =================================
+#nprogress {
+  pointer-events: none;
+
+  .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 2px;
+    background-color: $primary;
+    opacity: 0.75;
   }
 }

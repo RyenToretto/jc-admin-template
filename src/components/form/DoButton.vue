@@ -1,5 +1,5 @@
 <template>
-  <button class="do-button btn">登录</button>
+  <button class="do-button btn btn-default">登录</button>
 </template>
 
 <script setup lang="ts"></script>

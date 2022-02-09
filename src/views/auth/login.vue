@@ -16,11 +16,11 @@
 
       <div class="login-log">
         <div class="log-item">
-          <img src="/images/login.jpg" alt="" />
+          <img class="home-page-photo" src="@/assets/images/demo.png" alt="" />
         </div>
 
         <div class="log-item">
-          <img class="home-page-photo" src="@/assets/home.jpg" alt="" />
+          <img src="/images/login.jpg" alt="" />
         </div>
       </div>
     </div>

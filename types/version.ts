@@ -1,0 +1,3 @@
+interface StaticVersion {
+  version: string
+}

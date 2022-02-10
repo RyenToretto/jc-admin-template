@@ -28,13 +28,19 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { doLocal } from '@/utils'
-import { requestLogin } from '@/api'
+import { requestLogin, requestStaticVersion } from '@/api'
 
 import DoButton from '@/components/form/DoButton.vue'
 import DoLink from '@/components/form/DoLink.vue'
+
+onMounted(async () => {
+  const staticVersion = await requestStaticVersion()
+  console.log('staticVersion =', staticVersion)
+})
 
 const router = useRouter()
 

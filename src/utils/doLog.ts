@@ -7,10 +7,3 @@ export function warn(message: string) {
 export function error(message: string) {
   throw new Error(`[${projectName} error]:${message}`)
 }
-
-const doLog = {
-  warn,
-  error
-}
-
-export default doLog

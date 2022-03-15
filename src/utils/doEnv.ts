@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash'
 
-const doEnv: any = cloneDeep(import.meta.env)
+export const doEnv: any = cloneDeep(import.meta.env)
 
 Object.entries(import.meta.env as Record<string, any>).forEach(([key, value]) => {
   if (value === 'true' || value === 'false') {
@@ -13,5 +13,3 @@ Object.entries(import.meta.env as Record<string, any>).forEach(([key, value]) =>
     doEnv[key] = undefined
   }
 })
-
-export default doEnv as ViteEnv

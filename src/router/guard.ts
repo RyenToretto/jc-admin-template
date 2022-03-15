@@ -1,5 +1,5 @@
-import { doLocal } from '@/utils'
-import { doEnv } from '@/utils'
+import { doLocal } from '/@/utils'
+import { doEnv } from '/@/utils'
 import { RouteLocationNormalized, Router } from 'vue-router'
 
 class Guard {

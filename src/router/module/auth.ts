@@ -3,7 +3,7 @@ import { RouteRecordRaw } from 'vue-router'
 export default {
   name: 'auth',
   path: '/auth',
-  component: () => import('@/layouts/auth.vue'),
+  component: () => import('/@/layouts/auth.vue'),
   redirect: '/auth/login',
   children: [
     {
@@ -12,7 +12,7 @@ export default {
       meta: {
         backgroundColor: '#cbd5e1'
       },
-      component: () => import('@/views/auth/login.vue')
+      component: () => import('/@/views/auth/login.vue')
     }
   ]
 } as RouteRecordRaw

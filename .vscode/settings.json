@@ -174,7 +174,8 @@
   "stylelint.enable": true,
   "stylelint.packageManager": "yarn",
   "path-intellisense.mappings": {
-    "/@/": "${workspaceRoot}/src"
+    "/@/": "${workspaceRoot}/src",
+    "/#/": "${workspaceRoot}/types"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

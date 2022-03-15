@@ -1,3 +1,3 @@
-interface LoginInterface {
+export interface LoginInterface {
   token: string
 }

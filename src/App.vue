@@ -4,8 +4,8 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { requestUserInfo } from '@/api'
-import { doEnv } from '@/utils'
+import { requestUserInfo } from '/@/api'
+import { doEnv } from '/@/utils'
 
 console.log('doEnv =', doEnv)
 onMounted(async () => {

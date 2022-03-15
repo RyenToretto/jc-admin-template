@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "isolatedModules": true,
-    "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "strictFunctionTypes": false,
     "jsx": "preserve",
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
     "typeRoots": ["./node_modules/@types/", "./types"],
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["./src/*"],
-      "#/*": ["./types/*"]
+      "/@/*": ["./src/*"],
+      "/#/*": ["./types/*"]
     }
   },
   "include": [

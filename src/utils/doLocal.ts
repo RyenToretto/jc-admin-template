@@ -1,3 +1,5 @@
+import type { IData } from '/#/store'
+
 const doLocal = {
   set(key: string, data: IData) {
     if (data.expire) {

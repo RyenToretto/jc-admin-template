@@ -15,7 +15,7 @@ const configFn: UserConfigFn = ({ command, mode }: ConfigEnv) => {
         scss: {
           // 引入 .scss 这样就可以在全局中使用 variable.scss中预定义的变量了
           // 给导入的路径最后加上 ; 双引号中间是文件地址对应好自己项目的路径就行
-          additionalData: '@import "@/styles/shared";'
+          additionalData: '@import "/@/styles/shared";'
         }
       }
     },

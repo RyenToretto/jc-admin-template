@@ -1,9 +1,9 @@
-interface IMenuItem {
+export interface IMenuItem {
   title: string
   icon?: string
   active?: boolean
 }
 
-interface IMenu extends IMenuItem {
+export interface IMenu extends IMenuItem {
   children?: IMenuItem[]
 }

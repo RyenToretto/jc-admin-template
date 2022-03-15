@@ -1,4 +1,4 @@
-import { doEnv } from '@/utils'
+import { doEnv } from '/@/utils'
 import { RouteRecordRaw } from 'vue-router'
 import getRoutes from './view'
 import autoloadModuleRoutes from './module'

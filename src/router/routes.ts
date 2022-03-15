@@ -7,7 +7,7 @@ const routes = [
     meta: {
       backgroundColor: '#ddd'
     },
-    component: () => import('@/views/home.vue')
+    component: () => import('/@/views/home.vue')
   }
 ] as RouteRecordRaw[]
 

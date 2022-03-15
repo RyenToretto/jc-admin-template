@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { doLocal } from '@/utils'
+import { doLocal } from '/@/utils'
 
 const msg = 'Hello World!'
 let color = ref('red')

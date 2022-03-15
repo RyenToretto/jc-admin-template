@@ -1,4 +1,5 @@
-import { http } from '@/plugins/axios'
+import type { StaticVersion } from '/#/version'
+import { http } from '/@/plugins/axios'
 
 export const requestStaticVersion = () => {
   console.log(window.location.origin, window.location)

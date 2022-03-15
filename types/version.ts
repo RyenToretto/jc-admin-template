@@ -1,3 +1,3 @@
-interface StaticVersion {
+export interface StaticVersion {
   version: string
 }

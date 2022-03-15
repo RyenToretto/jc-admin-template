@@ -16,7 +16,7 @@
 
       <div class="login-log">
         <div class="log-item">
-          <img class="home-page-photo" src="@/assets/images/demo.png" alt="" />
+          <img class="home-page-photo" src="/@/assets/images/demo.png" alt="" />
         </div>
 
         <div class="log-item">
@@ -31,11 +31,11 @@
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
-import { doLocal } from '@/utils'
-import { requestLogin, requestStaticVersion } from '@/api'
+import { doLocal } from '/@/utils'
+import { requestLogin, requestStaticVersion } from '/@/api'
 
-import DoButton from '@/components/form/DoButton.vue'
-import DoLink from '@/components/form/DoLink.vue'
+import DoButton from '/@/components/form/DoButton.vue'
+import DoLink from '/@/components/form/DoLink.vue'
 
 onMounted(async () => {
   const staticVersion = await requestStaticVersion()
